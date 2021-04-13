@@ -10,7 +10,10 @@ it('hovers', () => {
   cy.get('#left11').should('not.be.visible')
 })
 
-it.only(':hovers', () => {
+// runs in Chrome browser
+// tip: use https://github.com/cypress-io/cypress-skip-test plugin
+// to run tests only on specific family of browsers
+it(':hovers', () => {
   cy.visit('test-hover.html')
   cy.get('#left21').should('not.be.visible')
   cy.get('#menu2').realHover()
